@@ -22,10 +22,10 @@
 		<section>
 			<img src="images/stars.png" id="stars">
 			<img src="images/moon.png" id="moon">
-			<img src="images/mountains_behind.png" id="mountains_behind">
+			<img src="images/background.png" id="mountains_behind">
 			<h2 id="text">Scott Hollas</h2>
 			<a href="#second" id ="explore_btn">Explore</a>
-			<img src="images/mountains_front.png" id="mountains_front">
+			<img src="images/foreground.png" id="mountains_front">
 		</section>
 		<div class="second" id ="second">
 			<h2> Hollas99 Github Repo's</h2>
@@ -52,6 +52,7 @@
 				mountains_front.style.top = value*0+'px';
 				text.style.marginRight = value*2.5+'px';
 				text.style.marginTop = value*0.9+'px';
+				text.style.opacity =value/125;
 				explore_btn.style.marginTop = value*0.4+'px';
 				header.style.top = value*0.5+'px'
 			})	
