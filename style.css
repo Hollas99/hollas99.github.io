@@ -39,7 +39,6 @@ header .logo{
 	font-weight: 700;
 	text-decoration: none;
 	font-size: 2em;
-	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 header ul{
@@ -63,13 +62,14 @@ header ul a:active{
 	color: #2b1055;
 }
 section{
-	position: relative;
+	position: absolute;
 	width: 100%;
-	heigh: 100vh;
+	min-heigh: 100vh;
 	padding: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 }
 section::before{
 	top:90vh;
@@ -80,6 +80,7 @@ section::before{
 	height: 100px;
 	background: linear-gradient(to top, #1c0522, transparent);
 	z-index: 1000;
+	overflow: hidden;
 }
 section img{
 	position: absolute;
@@ -121,14 +122,15 @@ section img#mountains_front{
 	transform: translateY(55vh)
 	
 }
-.sec{
-	top: 73vh;
+.second{
+	top: 100vh;
 	position: relative;
 	padding: 100px;
 	background: #1c0522;
+	z-index: 100000;
 	
 }
-.sec h2{
+.second h2{
 	font-size: 3.5em;
 	margin-bottom: 10px;
 	color: white;

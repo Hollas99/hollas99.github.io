@@ -11,7 +11,7 @@
 
 	<body>
 		<header>
-			<a href="#" class="logo">Github</a>
+			<a href="#" class="logo">Hollas.co.uk</a>
 			<ul>
 				<li><a href="#" class="active">Home</a></li>
 				<li><a href="#">About</a></li>	
@@ -21,16 +21,14 @@
 		</header>
 		<section>
 			<img src="images/stars.png" id="stars">
-			<div>
-				<img src="images/moon.png" id="moon">
-			</div>
+			<img src="images/moon.png" id="moon">
 			<img src="images/mountains_behind.png" id="mountains_behind">
 			<h2 id="text">Scott Hollas</h2>
-			<a href="#sec" id ="explore_btn">Explore</a>
+			<a href="#second" id ="explore_btn">Explore</a>
 			<img src="images/mountains_front.png" id="mountains_front">
 		</section>
-		<div class="sec" id ="sec">
-			<h2> Parallax Scrolling...</h2>
+		<div class="second" id ="second">
+			<h2> Hollas99 Github Repo's</h2>
 			<p>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>
 			hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>
 			
@@ -44,6 +42,7 @@
 			let mountains_front = document.getElementById('mountains_front');
 			let explore_btn = document.getElementById('explore_btn');
 			let text = document.getElementById('text');
+			let header = document.querySelector('header');
 			
 			window.addEventListener('scroll', function(){
 				let value = window.scrollY;
@@ -52,7 +51,9 @@
 				mountains_behind.style.top = value*0.5+'px';
 				mountains_front.style.top = value*0+'px';
 				text.style.marginRight = value*2.5+'px';
-				text.style.marginTop = value*0.4+'px';
+				text.style.marginTop = value*0.9+'px';
+				explore_btn.style.marginTop = value*0.4+'px';
+				header.style.top = value*0.5+'px'
 			})	
 		</script>
 	</body>
