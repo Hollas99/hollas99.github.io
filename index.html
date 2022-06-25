@@ -1,28 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<title>Scott Hollas</title>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="style.css" rel="stylesheet" type="text/css">
-</head>
+	<head>
+		<title>Scott Hollas</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet" type="text/css">
+	</head>
 
 
-<body>
-	<div class="container">
-		<section class = "one">
-			<h1> Scott Hollas&nbsp;</h1>
+	<body>
+		<header>
+			<a href="#" class="logo">Github</a>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li><a href="#">About</a></li>	
+				<li><a href="#">Work</a></li>	
+				<li><a href="#">Contact</a></li>	
+			</ul>
+		</header>
+		<section>
+			<img src="images/stars.png" id="stars">
+			<div>
+				<img src="images/moon.png" id="moon">
+			</div>
+			<img src="images/mountains_behind.png" id="mountains_behind">
+			<h2 id="text">Scott Hollas</h2>
+			<a href="#sec" id ="explore_btn">Explore</a>
+			<img src="images/mountains_front.png" id="mountains_front">
 		</section>
-		<section class = "two">
-		  <h1> &nbsp;</h1>
-		</section>
-		<section class = "three">
-		  <h1> &nbsp;</h1>
-		</section>
-		<section class = "four">
-			<h1> &nbsp;</h1>
-		</section>
-	</div>
-</body>
+		<div class="sec" id ="sec">
+			<h2> Parallax Scrolling...</h2>
+			<p>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>
+			hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>hello<br>
+			
+			
+			</p>
+		</div>
+		<script>
+			let stars = document.getElementById('stars');
+			let moon = document.getElementById('moon');
+			let mountains_behind = document.getElementById('mountains_behind');
+			let mountains_front = document.getElementById('mountains_front');
+			let explore_btn = document.getElementById('explore_btn');
+			let text = document.getElementById('text');
+			
+			window.addEventListener('scroll', function(){
+				let value = window.scrollY;
+				stars.style.left = value*0.5+'px';
+				moon.style.top = value*1.5+'px';
+				mountains_behind.style.top = value*0.5+'px';
+				mountains_front.style.top = value*0+'px';
+				text.style.marginRight = value*2.5+'px';
+				text.style.marginTop = value*0.4+'px';
+			})	
+		</script>
+	</body>
 </html>
